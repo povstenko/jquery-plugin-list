@@ -1,7 +1,15 @@
-let arr = ['hello', 'from', 'easy', 'programming', '.net'];
+let arr = ['elements', 'for', 'testing', 'jQuery', 'plugin'];
 
-$('#result').append($(arr).listThis('ul').colorMyList({
-    color: 'blue',
+$('#result1').CreateList({
+    data: arr,
+    listTag: 'ol',
+    color: 'green',
     fontSize: '30px',
-    textDecoration: 'none'
-}));
+    textdecoration: 'underline'
+});
+
+$('#result2').CreateList({
+    data: arr,
+    listClass: 'list-group',
+    itemClass: 'list-group-item'
+});
