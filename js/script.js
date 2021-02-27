@@ -13,3 +13,19 @@ $('#result2').CreateList({
     listClass: 'list-group',
     itemClass: 'list-group-item'
 });
+
+let cols = ['a', 'b'];
+let rows = [['one', 'one'], ['two', 'two']];
+
+$('#result3').CreateTable({
+    columns: cols,
+    data: rows
+});
+
+$('#result4').CreateTable({
+    columns: cols,
+    data: rows,
+    tableClass: 'table table-striped table-bordered',
+    theadClass: 'table-dark',
+    textAlign: 'center',
+});

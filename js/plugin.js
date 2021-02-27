@@ -21,3 +21,35 @@ $.fn.CreateList = function (options) {
         'text-decoration': settings.textdecoration
     }));
 }
+
+$.fn.CreateTable = function (options) {
+    let settings = $.extend({
+        columns: ['col1', 'col2'],
+        data: [['test1', 'test1'], ['test2', 'test2']],
+        tableClass: '',
+        theadClass: '',
+        textAlign: 'left'
+    }, options);
+
+    let table = $('<table class="' + settings.tableClass + ' text-' + settings.textAlign + '">');
+
+    // columns names on table header
+    let theadtr = $('<tr>');
+    $.each(settings.columns, function (i, item) {
+        theadtr.append($('<th>').append(item));
+    });
+    table.append($('<thead class="' + settings.theadClass + '">').append(theadtr));
+
+    // rows on table body
+    let tbody = $('<tbody>');
+    $.each(settings.data, function (i, row) {
+        let tbodytr = $('<tr>');
+        $.each(row, function (i, item) {
+            tbodytr.append($('<td>').append(item));
+        });
+        tbody.append(tbodytr);
+    });
+    table.append(tbody);
+
+    this.append(table);
+}
