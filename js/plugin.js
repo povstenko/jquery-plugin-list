@@ -1,5 +1,6 @@
 $.fn.CreateList = function (options) {
     let settings = $.extend({
+        openTrigger: '#open',
         data: ['test', 'test'],
         listTag: 'ul',
         listClass: '',

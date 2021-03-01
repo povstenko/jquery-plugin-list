@@ -1,2 +1,3 @@
 # html-web-template
-Simple HTML, CSS, JS web project structure template
+
+https://cdn.jsdelivr.net/gh/povstenko/jquery-plugin-list/js/plugin.js
